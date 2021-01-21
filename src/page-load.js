@@ -1,3 +1,6 @@
+
+document.addEventListener('DOMContentLoaded', pageLoad);
+
 function pageLoad() {
   const container = document.getElementsByTagName('div');
   // header
