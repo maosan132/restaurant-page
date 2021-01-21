@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', pageLoad);
 
 function pageLoad() {
