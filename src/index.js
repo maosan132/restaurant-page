@@ -1,25 +1,10 @@
 // import _ from 'lodash';
 import './style.css';
+import callPage from './page-load'
 
 console.log('hello city of hell');
 
 const container = document.getElementById('content');
-const callPage = (event) => {
-  console.log(event.id);
-  switch (event.id) {
-    case 'home':
-      console.log('renders home module.');
-      break;
-    case 'menu':
-      console.log('renders menu module.');
-      break;
-    case 'contact':
-      console.log('renders contact module.');
-      break;
-    default:
-      break;
-  }
-};
 
 const createMenuTabs = () => {
   const tabs = document.createElement('div');
@@ -34,15 +19,16 @@ const createMenuTabs = () => {
 
 function init() {
   console.log('i am init()');
-  // const addEvent = elem => elem.addEventListener('click', () => { callPage(this); }, false);
+
+  console.log(createMenuTabs());
   container.appendChild(createMenuTabs());
 
   const home = document.getElementById('home');
-  home.addEvent();
+  home.addEventListener('click', callPage);
   const menu = document.getElementById('menu');
-  menu.addEventListener('click', () => { callPage(this); }, false);
+  menu.addEventListener('click', callPage);
   const contact = document.getElementById('contact');
-  contact.addEventListener('click', () => { callPage(this); }, false);
+  contact.addEventListener('click', callPage);
 }
 
 document.addEventListener('DOMContentLoaded', init);

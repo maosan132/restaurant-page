@@ -1,26 +1,56 @@
-import * from './helper';
+import item1 from './images/item1.jpg';
+import item2 from './images/item2.jpg';
+import item3 from './images/item3.jpg';
 
-const container = document.getElementById('content');
-const nav = document.createElement('nav');
-const grid = document.createElement('div').setAttribute('class', 'grid');
-const footer = document.createElement('footer');
-
-grid.innerhtml = `
-  <div class="module">ddfd</div>
-  <div class="module">ddfdf</div>
-  <div class="module">dfdf</div>
-  <div class="module">ddf</div>
-  <div class="module">ddf</div>
-  <div class="module">dfdf</div>
+const menuPage = () => {
+  const grid = document.createElement('div');
+  grid.setAttribute('class', 'grid');
+  grid.innerHTML = `
+  <h1 class="title">Our Unique Menu</h1>
+  <div class="module">
+    <img src=${item1} alt="">
+    <h2>Item #1</h2>
+    <span>Price: $20</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua.</p>
+  </div>
+  <div class="module">
+    <img src=${item2} alt="">
+    <h2>Item #2</h2>
+    <span>Price: $40</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua.</p>
+  </div>
+  <div class="module">
+    <img src=${item3} alt="">
+    <h2>Item #3</h2>
+    <span>Price: $60</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua.</p>
+  </div>
+  <div class="module">
+    <img src=${item2} alt="">
+    <h2>Item #4</h2>
+    <span>Price: $10</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua.</p>
+  </div>
+  <div class="module">
+    <img src=${item3} alt="">
+    <h2>Item #5</h2>
+    <span>Price: $80</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua.</p>
+  </div>
+  <div class="module">
+    <img src=${item1} alt="">
+    <h2>Item #6</h2>
+    <span>Price: $200</span>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+      labore et dolore magna aliqua.</p>
+  </div>
 `;
+return grid;
+}
 
-const createMenuTabs = () => {
-  const tabs = document.createElement('div');
-  tabs.className = 'tabsContainer';
-  tabs.innerHTML = `
-    <button class="menulink" id="home">Home</button>
-    <button class="menulink" id="menu">Our Menu</button>
-    <button class="menulink" id="contact">Contact Us</button>
-  `;
-  return tabs;
-};
+export default menuPage;
