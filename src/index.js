@@ -1,8 +1,6 @@
-// import _ from 'lodash';
 import './style.css';
-import callPage from './page-load'
-
-console.log('hello city of hell');
+import { callPage, createNav, createFooter } from './page-load';
+import homePage from './home';
 
 const container = document.getElementById('content');
 
@@ -18,10 +16,11 @@ const createMenuTabs = () => {
 };
 
 function init() {
-  console.log('i am init()');
-
-  console.log(createMenuTabs());
   container.appendChild(createMenuTabs());
+  // container.appendChild(createNav());
+  // nav.appendChild(createMenuTabs());
+  // container.append(homePage(), createFooter());
+  container.append(createNav(), homePage(), createFooter());
 
   const home = document.getElementById('home');
   home.addEventListener('click', callPage);

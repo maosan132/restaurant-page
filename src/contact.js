@@ -20,6 +20,6 @@ const contactPage = () => {
   <img class="image" src= ${map} alt="">
   `;
   return main;
-}
+};
 
 export default contactPage;

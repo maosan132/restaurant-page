@@ -15,8 +15,8 @@ const homePage = () => {
     anim id est laborum.</p>
   </div>
   <img class="image" src= ${cover} alt="">
-`;
-return main;
-}
+  `;
+  return main;
+};
 
 export default homePage;

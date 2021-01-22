@@ -2,21 +2,19 @@ import contactPage from './contact';
 import homePage from './home';
 import menuPage from './menu';
 
-// function pageLoad() {
-//   const container = document.getElementsByTagName('div');
-//   // header
-//   const header = createHeader('header', 'Star Food');
-//   container.appendChild(header);
-//   // nav
-//   const nav = createNav('nav');
-//   container.appendChild(nav);
-//   // tab-content
-//   const tabContent = createMain('tab-content');
-//   container.appendChild(tabContent);
-//   // footer
-//   const footer = createFooter('footer', 'Made by the force');
-//   container.appendChild(footer);
-// }
+
+const createNav = () => {
+  console.log('dasdf')
+  const nav = document.createElement('nav');
+  nav.innerHTML = 'The Table Restaurant'
+  return nav;
+};
+
+const createFooter= () => {
+  const footer = document.createElement('footer');
+  footer.innerHTML = 'Copyright maosan132@ 2021';
+  return footer;
+};
 
 const callPage = (event) => {
   const container = document.getElementById('content');
@@ -25,7 +23,7 @@ const callPage = (event) => {
 
   switch (event.target.id) {
     case 'home':
-      container.appendChild(homePage())
+      container.append(homePage())
       break;
     case 'menu':
       container.appendChild(menuPage())
@@ -35,7 +33,8 @@ const callPage = (event) => {
       break;
     default:
       break;
-}
+  }
 };
 
-export default callPage;
+// export default callPage;
+export {callPage, createFooter, createNav};

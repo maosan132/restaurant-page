@@ -3,11 +3,14 @@ import item2 from './images/item2.jpg';
 import item3 from './images/item3.jpg';
 
 const menuPage = () => {
+  const title = document.createElement('h1');
   const grid = document.createElement('div');
+  const tempContainer = document.createElement('div');
+
+  title.innerHTML = 'Our Unique Menu'
   grid.setAttribute('class', 'grid');
   grid.innerHTML = `
-  <h1 class="title">Our Unique Menu</h1>
-  <div class="module">
+    <div class="module">
     <img src=${item1} alt="">
     <h2>Item #1</h2>
     <span>Price: $20</span>
@@ -49,8 +52,10 @@ const menuPage = () => {
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
       labore et dolore magna aliqua.</p>
   </div>
-`;
-return grid;
-}
+  `;
+
+  tempContainer.append(title, grid);
+  return tempContainer;
+};
 
 export default menuPage;
