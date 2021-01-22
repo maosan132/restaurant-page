@@ -2,34 +2,29 @@ import contactPage from './contact';
 import homePage from './home';
 import menuPage from './menu';
 
-
-const createNav = () => {
-  console.log('dasdf')
-  const nav = document.createElement('nav');
-  nav.innerHTML = 'The Table Restaurant'
-  return nav;
-};
-
-const createFooter= () => {
+const createFooter = () => {
   const footer = document.createElement('footer');
   footer.innerHTML = 'Copyright maosan132@ 2021';
   return footer;
 };
 
-const callPage = (event) => {
+const replaceElem = newElem => {
   const container = document.getElementById('content');
-  container.innerHTML = '';
-  console.log(event.target);
+  const oldElem = container.getElementsByTagName('div')[1];
+  container.replaceChild(newElem, oldElem);
+  return container;
+};
 
+const callPage = (event) => {
   switch (event.target.id) {
     case 'home':
-      container.append(homePage())
+      replaceElem(homePage());
       break;
     case 'menu':
-      container.appendChild(menuPage())
+      replaceElem(menuPage());
       break;
     case 'contact':
-      container.appendChild(contactPage())
+      replaceElem(contactPage());
       break;
     default:
       break;
@@ -37,4 +32,4 @@ const callPage = (event) => {
 };
 
 // export default callPage;
-export {callPage, createFooter, createNav};
+export { callPage, createFooter };

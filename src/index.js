@@ -1,11 +1,11 @@
 import './style.css';
-import { callPage, createNav, createFooter } from './page-load';
+import { callPage, createFooter } from './page-load';
 import homePage from './home';
 
 const container = document.getElementById('content');
 
 const createMenuTabs = () => {
-  const tabs = document.createElement('div');
+  const tabs = document.createElement('span');
   tabs.className = 'tabsContainer';
   tabs.innerHTML = `
     <button class="menulink" id="home">Home</button>
@@ -15,11 +15,15 @@ const createMenuTabs = () => {
   return tabs;
 };
 
+const createNav = () => {
+  console.log('inside create nav');
+  const nav = document.createElement('nav');
+  nav.innerHTML = '<span>The Table Restaurant<span>';
+  nav.appendChild(createMenuTabs())
+  return nav;
+};
+
 function init() {
-  container.appendChild(createMenuTabs());
-  // container.appendChild(createNav());
-  // nav.appendChild(createMenuTabs());
-  // container.append(homePage(), createFooter());
   container.append(createNav(), homePage(), createFooter());
 
   const home = document.getElementById('home');

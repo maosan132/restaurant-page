@@ -23,3 +23,10 @@ const remove = elem => {
 const empty = elem => {
   while (elem.firstChild) remove(elem.firstChild);
 };
+
+function renderBodyElems(currentPage) {
+  container.appendChild(createMenuTabs());
+  container.append(createNav(), currentPage, createFooter());
+};
+
+const navContainer = document.getElementsByTagName('nav');
