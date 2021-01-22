@@ -2,7 +2,8 @@
 
 # Project Name
 
-> One paragraph statement about the project.
+> This project is about Javascript ES6 modules and Webpack. I make a website for a fictitious restaurant with 3 sub pages,
+and all the logic and presentation will be supported by and inside js modules. Every page loads without any http request.
 
 ![screenshot](./app_screenshot.png)
 
@@ -10,9 +11,11 @@ Additional description about the project and its features.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- HTML5
+- CSS3 with Cssgrid and Flexbox
+- Javascript
+- ES6 modules
+- Webpack
 
 ## Live Demo
 
