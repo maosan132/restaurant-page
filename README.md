@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Restaurant Page
 
 > This project is about Javascript ES6 modules and Webpack. I make a website for a fictitious restaurant with 3 sub pages,
 and all the logic and presentation will be supported by and inside js modules. Every page loads without any http request.
