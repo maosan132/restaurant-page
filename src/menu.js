@@ -7,7 +7,7 @@ const menuPage = () => {
   const grid = document.createElement('div');
   const tempContainer = document.createElement('div');
 
-  title.innerHTML = 'Our Unique Menu'
+  title.innerHTML = 'Our Unique Menu';
   grid.setAttribute('class', 'grid');
   grid.innerHTML = `
     <div class="module">

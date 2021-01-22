@@ -20,19 +20,37 @@ nav {
   grid-area: nav;
   border-bottom: 2px solid;
   border-color: red;
-  height: 50px;
+  min-height: 50px;
   padding: 20px;
   font-size: 40px;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: normal;
+  align-content: normal;
 }
+
 h3 {
   margin: 0;
 }
+
 .tabsContainer {
-  float: right;
+  /* float: right;
   position: absolute;
   bottom: 0;
-  right: 50px;
+  right: 50px; */
+}
+
+h3,
+.tabsContainer {
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
 }
 
 .title {
@@ -57,9 +75,8 @@ h3 {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas:
-    "intro image";
+  gap: 0 0;
+  grid-template-areas: "intro image";
   grid-area: main;
 }
 
@@ -78,7 +95,8 @@ h3 {
   align-items: center;
   justify-items: center;
   color: gray;
-  /*padding: 10px 0;*/
+
+  /* padding: 10px 0; */
   max-width: 300px;
 }
 
@@ -86,12 +104,12 @@ h2 {
   padding: 10px 0;
 }
 
-span+p {
+span + p {
   text-align: justify;
   padding: 10px 20px;
 }
 
-h1+p {
+h1 + p {
   text-align: justify;
   padding-top: 10px;
   font-size: 20px;
@@ -110,7 +128,7 @@ footer {
   position: relative;
 }
 
-footer>p {
+footer > p {
   position: absolute;
   bottom: 0%;
 }

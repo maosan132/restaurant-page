@@ -16,10 +16,9 @@ const createMenuTabs = () => {
 };
 
 const createNav = () => {
-  console.log('inside create nav');
   const nav = document.createElement('nav');
   nav.innerHTML = '<strong>The Table Restaurant<strong>';
-  nav.appendChild(createMenuTabs())
+  nav.appendChild(createMenuTabs());
   return nav;
 };
 
