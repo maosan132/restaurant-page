@@ -5,7 +5,7 @@ import homePage from './home';
 const container = document.getElementById('content');
 
 const createMenuTabs = () => {
-  const tabs = document.createElement('span');
+  const tabs = document.createElement('div');
   tabs.className = 'tabsContainer';
   tabs.innerHTML = `
     <button class="menulink" id="home">Home</button>
@@ -18,7 +18,7 @@ const createMenuTabs = () => {
 const createNav = () => {
   console.log('inside create nav');
   const nav = document.createElement('nav');
-  nav.innerHTML = '<span>The Table Restaurant<span>';
+  nav.innerHTML = '<strong>The Table Restaurant<strong>';
   nav.appendChild(createMenuTabs())
   return nav;
 };
