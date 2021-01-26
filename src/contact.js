@@ -6,11 +6,11 @@ const contactPage = () => {
   const intro = document.createElement('div');
   const h1 = document.createElement('h1');
   const p = document.createElement('p');
-  const ul = document.createElement('ul')
-  const contactLine1 = document.createElement('li')
-  const contactLine2 = document.createElement('li')
-  const contactLine3= document.createElement('li')
-  const contactLine4 = document.createElement('li')
+  const ul = document.createElement('ul');
+  const contactLine1 = document.createElement('li');
+  const contactLine2 = document.createElement('li');
+  const contactLine3 = document.createElement('li');
+  const contactLine4 = document.createElement('li');
   const img = document.createElement('img');
   intro.setAttribute('class', 'intro');
   h1.innerText = 'Get to know Our Restaurant';

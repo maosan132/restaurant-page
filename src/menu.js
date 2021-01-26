@@ -6,7 +6,7 @@ const menuPage = () => {
   const title = document.createElement('h1');
   const grid = document.createElement('div');
   const tempContainer = document.createElement('div');
-  tempContainer.setAttribute('class', 'menu')
+  tempContainer.setAttribute('class', 'menu');
   const module1 = document.createElement('div');
   const module2 = document.createElement('div');
   const module3 = document.createElement('div');
@@ -19,7 +19,9 @@ const menuPage = () => {
   const price1 = document.createElement('span');
   const price2 = document.createElement('span');
   const price3 = document.createElement('span');
-  const p = document.createElement('p');
+  const p1 = document.createElement('p');
+  const p2 = document.createElement('p');
+  const p3 = document.createElement('p');
   title.innerHTML = 'Our Unique Menu';
   grid.setAttribute('class', 'grid');
   module1.setAttribute('class', 'module');
@@ -34,13 +36,16 @@ const menuPage = () => {
   price1.innerText = 'price: $12';
   price2.innerText = 'price: $20';
   price3.innerText = 'price: $35';
-  p.innerText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+  p1.innerText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
   labore et dolore magna aliqua.`;
-  module1.append(img1, title1, price1, p);
-  module2.append(img2, title2, price2, p);
-  module3.append(img3, title3, price3, p);
+  p2.innerText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+  labore et dolore magna aliqua.`;
+  p3.innerText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+  labore et dolore magna aliqua.`;
+  module1.append(img1, title1, price1, p1);
+  module2.append(img2, title2, price2, p2);
+  module3.append(img3, title3, price3, p3);
   grid.append(module1, module2, module3);
-
 
   tempContainer.append(title, grid);
   return tempContainer;

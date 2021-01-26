@@ -3,15 +3,22 @@ import { callPage, createFooter } from './page-load';
 import homePage from './home';
 
 const container = document.getElementById('content');
-
 const createMenuTabs = () => {
   const tabs = document.createElement('div');
+  const homeButton = document.createElement('button');
+  const menuButton = document.createElement('button');
+  const contactButton = document.createElement('button');
   tabs.className = 'tabsContainer';
-  tabs.innerHTML = `
-    <button class="menulink" id="home">Home</button>
-    <button class="menulink" id="menu">Our Menu</button>
-    <button class="menulink" id="contact">Contact Us</button>
-  `;
+  homeButton.className = 'menulink';
+  menuButton.className = 'menulink';
+  contactButton.className = 'menulink';
+  homeButton.id = 'home';
+  menuButton.id = 'menu';
+  contactButton.id = 'contact';
+  homeButton.innerText = 'Home';
+  menuButton.innerText = 'Our Menu';
+  contactButton.innerText = 'Contact Us';
+  tabs.append(homeButton, menuButton, contactButton);
   return tabs;
 };
 
