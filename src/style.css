@@ -117,13 +117,15 @@ button:active {
   padding: 30px;
 }
 
+.menu {
+  padding: 30px;
+}
+
 .module {
   display: grid;
   align-items: center;
   justify-items: center;
   color: gray;
-
-  /* padding: 10px 0; */
   max-width: 300px;
 }
 

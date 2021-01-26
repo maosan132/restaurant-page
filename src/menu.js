@@ -6,53 +6,41 @@ const menuPage = () => {
   const title = document.createElement('h1');
   const grid = document.createElement('div');
   const tempContainer = document.createElement('div');
-
+  tempContainer.setAttribute('class', 'menu')
+  const module1 = document.createElement('div');
+  const module2 = document.createElement('div');
+  const module3 = document.createElement('div');
+  const img1 = document.createElement('img');
+  const img2 = document.createElement('img');
+  const img3 = document.createElement('img');
+  const title1 = document.createElement('h2');
+  const title2 = document.createElement('h2');
+  const title3 = document.createElement('h2');
+  const price1 = document.createElement('span');
+  const price2 = document.createElement('span');
+  const price3 = document.createElement('span');
+  const p = document.createElement('p');
   title.innerHTML = 'Our Unique Menu';
   grid.setAttribute('class', 'grid');
-  grid.innerHTML = `
-    <div class="module">
-    <img src=${item1} alt="">
-    <h2>Item #1</h2>
-    <span>Price: $20</span>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua.</p>
-  </div>
-  <div class="module">
-    <img src=${item2} alt="">
-    <h2>Item #2</h2>
-    <span>Price: $40</span>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua.</p>
-  </div>
-  <div class="module">
-    <img src=${item3} alt="">
-    <h2>Item #3</h2>
-    <span>Price: $60</span>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua.</p>
-  </div>
-  <div class="module">
-    <img src=${item2} alt="">
-    <h2>Item #4</h2>
-    <span>Price: $10</span>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua.</p>
-  </div>
-  <div class="module">
-    <img src=${item3} alt="">
-    <h2>Item #5</h2>
-    <span>Price: $80</span>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua.</p>
-  </div>
-  <div class="module">
-    <img src=${item1} alt="">
-    <h2>Item #6</h2>
-    <span>Price: $200</span>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua.</p>
-  </div>
-  `;
+  module1.setAttribute('class', 'module');
+  module2.setAttribute('class', 'module');
+  module3.setAttribute('class', 'module');
+  img1.setAttribute('src', `${item1}`);
+  img2.setAttribute('src', `${item2}`);
+  img3.setAttribute('src', `${item3}`);
+  title1.innerText = 'Fabulous food';
+  title2.innerText = 'Delicious thing';
+  title3.innerText = 'Yummy item';
+  price1.innerText = 'price: $12';
+  price2.innerText = 'price: $20';
+  price3.innerText = 'price: $35';
+  p.innerText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+  labore et dolore magna aliqua.`;
+  module1.append(img1, title1, price1, p);
+  module2.append(img2, title2, price2, p);
+  module3.append(img3, title3, price3, p);
+  grid.append(module1, module2, module3);
+
 
   tempContainer.append(title, grid);
   return tempContainer;
